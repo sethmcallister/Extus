@@ -1,0 +1,5 @@
+name: Extus
+main: xyz.mcallister.extus.Main
+version: 0.0.1-SNAPSHOT
+commands:
+  extus:
