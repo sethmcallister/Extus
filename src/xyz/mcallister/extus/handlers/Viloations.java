@@ -8,7 +8,6 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class Viloations
 {
-    private static ConcurrentHashMap<String, Integer> vio = new ConcurrentHashMap<>();
     private static ConcurrentHashMap<UUID, ConcurrentHashMap<String, Integer>> violation = new ConcurrentHashMap<>();
 
     public static Integer getViolocation(UUID uuid, String cheat)
@@ -22,6 +21,8 @@ public class Viloations
 
     public static void setViolocation(UUID uuid,String cheat, Integer newlevel)
     {
+        ConcurrentHashMap<String, Integer> vio = new ConcurrentHashMap<>();
+        vio.clear();
         vio.put(cheat, newlevel);
         violation.put(uuid, vio);
     }
